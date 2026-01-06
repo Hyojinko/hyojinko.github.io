@@ -325,13 +325,26 @@ body::before {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.2rem;
+}
+
+.experience-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.experience-list li i {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 0.2rem;
 }
 
 .experience-item {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
+    flex: 1;
 }
 
 .experience-period {
