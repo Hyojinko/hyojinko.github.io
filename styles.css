@@ -460,6 +460,71 @@ body::before {
     opacity: 0.7;
 }
 
+.projects-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project-item-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.project-link {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.project-link:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.project-org-link {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-left: 1.1rem;
+}
+
+.project-item {
+    margin-bottom: 3rem;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+}
+
+.project-organization {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.project-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.project-description p {
+    margin-bottom: 1rem;
+}
+
 .paper-status {
     font-size: 0.75rem;
     background-color: var(--accent-color);
