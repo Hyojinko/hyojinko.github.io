@@ -1,12 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="ko">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Hyojin Ko </title>
-  </head>
-  <body>
-    <h1>Hyojin Ko</h1>
-    <p>Research Area</p>
-  </body>
+    <title>Your Name - Personal Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <h1 class="logo">Your Name</h1>
+            </div>
+            <div class="nav-center">
+                <a href="#bio" class="nav-link">Bio</a>
+                <a href="#papers" class="nav-link">Papers</a>
+                <a href="#talks" class="nav-link">Talks</a>
+                <a href="#news" class="nav-link">News</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#teaching" class="nav-link">Teaching</a>
+            </div>
+            <div class="nav-right">
+                <button class="icon-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="icon-btn" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="left-column">
+                <div class="profile-section">
+                    <div class="profile-image-wrapper">
+                        <img src="20240612_003.JPG" alt="Profile" class="profile-image">
+                        <div class="coffee-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                    </div>
+                    <h2 class="profile-name">Chien Shiung Wu</h2>
+                    <p class="profile-name-chinese">吳健雄</p>
+                    <p class="profile-title">Chief Scientist</p>
+                    <p class="profile-affiliation">OpenAI</p>
+                    
+                    <div class="social-icons">
+                        <a href="mailto:your.email@example.com" class="social-icon" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://twitter.com" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com" class="social-icon" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://scholar.google.com" class="social-icon" aria-label="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://orcid.org" class="social-icon" aria-label="ORCID">
+                            <i class="fab fa-orcid"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <section class="content-section" id="about">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-text">
+                        Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. 
+                        Her research interests include distributed robotics, mobile computing and programmable matter. 
+                        She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, 
+                        systems of self-organizing robots, and mobile sensor networks.
+                    </p>
+                    <button class="cv-button">
+                        <i class="fas fa-download"></i>
+                        Download CV
+                    </button>
+                </section>
+
+                <section class="content-section" id="interests">
+                    <h2 class="section-title">Interests</h2>
+                    <ul class="interests-list">
+                        <li>Artificial Intelligence</li>
+                        <li>Computational Linguistics</li>
+                        <li>Information Retrieval</li>
+                    </ul>
+                </section>
+
+                <section class="content-section" id="education">
+                    <h2 class="section-title">Education</h2>
+                    <ul class="education-list">
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>PhD Artificial Intelligence, Stanford University</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>MEng Artificial Intelligence, Massachusetts Institute of Technology</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BSc Artificial Intelligence, Massachusetts Institute of Technology</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
 </html>
+
