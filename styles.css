@@ -388,10 +388,23 @@ body::before {
     gap: 1.5rem;
 }
 
+.papers-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.papers-list li i {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 0.2rem;
+}
+
 .paper-item {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    flex: 1;
 }
 
 .paper-title {
@@ -407,11 +420,19 @@ body::before {
     color: var(--text-color);
     text-decoration: none;
     transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 .paper-title a:hover {
     opacity: 0.7;
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+.paper-link-icon {
+    font-size: 0.7rem;
+    opacity: 0.7;
 }
 
 .paper-status {
