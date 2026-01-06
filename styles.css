@@ -391,20 +391,13 @@ body::before {
 .papers-list li {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
-}
-
-.papers-list li i {
-    font-size: 1.2rem;
-    color: var(--text-color);
-    margin-top: 0.2rem;
 }
 
 .paper-item {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    flex: 1;
+    width: 100%;
 }
 
 .paper-title {
