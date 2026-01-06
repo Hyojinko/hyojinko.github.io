@@ -44,10 +44,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (targetSection) {
                         targetSection.scrollIntoView({ behavior: 'smooth' });
                     }
+                } else {
+                    window.location.href = href;
                 }
             }
         });
     });
+    
+    if (window.location.hash) {
+        setTimeout(function() {
+            const targetId = window.location.hash.substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 100);
+    }
     
     const cvButton = document.querySelector('.cv-button');
     if (cvButton) {
