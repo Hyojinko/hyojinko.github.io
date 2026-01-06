@@ -1,3 +1,9 @@
+window.addEventListener('load', function() {
+    if (!window.location.hash) {
+        window.scrollTo(0, 0);
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const searchBtn = document.getElementById('searchBtn');
@@ -58,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             }
-        }, 100);
+        }, 300);
     }
     
     const cvButton = document.querySelector('.cv-button');
