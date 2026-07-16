@@ -130,6 +130,15 @@ body::before {
     align-items: start;
 }
 
+.container-single {
+    grid-template-columns: 1fr;
+    max-width: 1000px;
+}
+
+.container-single .right-column {
+    width: 100%;
+}
+
 .left-column {
     position: sticky;
     top: 100px;
@@ -269,6 +278,12 @@ body::before {
     opacity: 0.9;
 }
 
+.cv-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
 .cv-button {
     background-color: var(--accent-color);
     color: var(--text-color);
@@ -281,6 +296,10 @@ body::before {
     align-items: center;
     gap: 0.5rem;
     transition: background-color 0.3s ease;
+}
+
+a.cv-button {
+    text-decoration: none;
 }
 
 .cv-button:hover {
@@ -604,6 +623,12 @@ body::before {
     animation: pulse-dot 1.8s ease-in-out infinite;
 }
 
+.project-status--done {
+    background: rgba(107, 78, 113, 0.35);
+    border: 1px solid rgba(107, 78, 113, 0.65);
+    color: #d4b8e0;
+}
+
 .project-status--planned {
     background: rgba(107, 78, 113, 0.25);
     border: 1px solid rgba(107, 78, 113, 0.5);
@@ -866,6 +891,32 @@ body::before {
     margin: 0;
 }
 
+.project-media {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-top: 1rem;
+}
+
+.project-media--duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.project-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+body.light-theme .project-media img {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
 .project-funded-list {
     display: flex;
     flex-direction: column;
@@ -966,6 +1017,14 @@ body::before {
     border-radius: 3px;
     font-weight: 500;
     opacity: 0.9;
+}
+
+.paper-status-accepted {
+    background-color: #2d6a4f;
+}
+
+.paper-status-preparation {
+    background-color: #7f5539;
 }
 
 .paper-authors {
