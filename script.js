@@ -66,12 +66,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 300);
     }
-    
-    const cvButton = document.querySelector('.cv-button');
-    if (cvButton) {
-        cvButton.addEventListener('click', function() {
-            alert('CV 다운로드 기능을 구현해주세요.');
-        });
-    }
 });
 
