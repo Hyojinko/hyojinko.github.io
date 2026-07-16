@@ -32,81 +32,370 @@
     </header>
 
     <main class="main-content">
-        <div class="container">
-            <div class="right-column" style="max-width: 1000px; margin: 0 auto;">
+        <div class="container container-single">
+            <div class="right-column">
                 <section class="content-section">
                     <h2 class="section-title">Projects</h2>
-                    
-                    <div class="project-item">
-                        <h3 class="project-title">Deep Learning-based Clinical Decision Support System for Postoperative Abdominal Surgery Patient Nursing Surveillance using EMR Data</h3>
-                        <div class="project-organization">Ministry of Science and ICT (MSIT)</div>
-                        
-                        <div class="project-description">
-                            <p>
-                                Based on research and experience in multimodal data processing, this project analyzes and predicts patient personal health record data composed of various formats such as images and text using "Explainable AI" technology to support nursing surveillance systems. Additionally, by utilizing continuous learning, the system learns changing patient conditions and disease patterns over time to support real-time patient monitoring.
+
+                    <!-- ────────────────── FEATURED ────────────────── -->
+                    <div class="portfolio-featured">
+                        <article class="project-card project-card--featured">
+                            <div class="project-badge-row">
+                                <span class="project-badge">Featured</span>
+                                <span class="project-status project-status--active">Active</span>
+                            </div>
+                            <h3 class="project-title">Uncertainty-Aware Meta-Learning for Robust Stent Segmentation via Selective Ensemble</h3>
+                            <div class="project-meta-row">
+                                <span class="project-organization">Asan Institute of Life Sciences / Asan Medical Center</span>
+                                <span class="project-period">2026</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-tag">Deep Learning</span>
+                                <span class="project-tag">Segmentation</span>
+                                <span class="project-tag">Selective Ensemble</span>
+                                <span class="project-tag">Meta-Learning</span>
+                                <span class="project-tag">CBAM</span>
+                                <span class="project-tag">CinC 2026</span>
+                            </div>
+                            <p class="project-role">Lead Researcher — Label-Free Selective Ensemble for Stent Segmentation</p>
+                            <p class="project-summary">
+                                A label-free meta-learning selective ensemble framework fusing five loss-function-based EfficientNet-B7/FPN models with pixel-wise uncertainty metrics and CBAM attention for precise segmentation of low-visibility stent regions during PCI.
                             </p>
-                            
-                            <p>
-                                In this project, I researched feature extraction and feature fusing methods from image and text data, and also conducted research on explainable AI, resulting in the publication of the paper "XAI-based Clinical Decision Support System: A Systematic Review" in Applied Sciences Journal.
+                            <div class="project-highlights">
+                                <div class="project-highlight">
+                                    <h4>Problem</h4>
+                                    <p>Stent structures in fluoroscopic imaging have low resolution, severe motion artifacts, and fine morphology, making single-model segmentation unreliable. Conventional ensemble meta-learning requires extra labels and ignores pixel-level uncertainty.</p>
+                                </div>
+                                <div class="project-highlight">
+                                    <h4>Approach</h4>
+                                    <ul>
+                                        <li>Five base models with complementary auxiliary losses</li>
+                                        <li>10-channel CBAM meta-learner with uncertainty maps</li>
+                                        <li>Two-phase label-free training (Random-fit / Nearest-neighbor-fit)</li>
+                                    </ul>
+                                </div>
+                                <div class="project-highlight">
+                                    <h4>Results</h4>
+                                    <p>Internal DSC 90.43% (942 frames); external DSC 83.55% (361 frames) under domain shift, up to +3.68% over alternative ensemble strategies.</p>
+                                </div>
+                            </div>
+                            <div class="project-publication">
+                                <strong>Publication:</strong>
+                                <a href="https://cinc2026.org/" target="_blank" rel="noopener noreferrer">Uncertainty-Aware Meta-Learning for Robust Stent Segmentation via Selective Ensemble</a>
+                                — Computing in Cardiology (CinC) 2026, Accepted
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- ────────────────── FEATURED: MDCKE ────────────────── -->
+                    <div class="portfolio-featured">
+                        <article class="project-card project-card--featured">
+                            <div class="project-badge-row">
+                                <span class="project-badge">Master's Thesis</span>
+                                <span class="project-status project-status--published">Published</span>
+                            </div>
+                            <h3 class="project-title">MDCKE: Multimodal Deep-Context Knowledge Extractor that Integrates Contextual Information</h3>
+                            <div class="project-meta-row">
+                                <span class="project-organization">School of Computing, Gachon University</span>
+                                <span class="project-period">2023 – 2025</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-tag">Multimodal NER</span>
+                                <span class="project-tag">Relation Extraction</span>
+                                <span class="project-tag">Knowledge Graph</span>
+                                <span class="project-tag">Image Captioning</span>
+                                <span class="project-tag">BERT</span>
+                                <span class="project-tag">NLP</span>
+                            </div>
+                            <p class="project-role">First Author — Full pipeline design, implementation, and evaluation</p>
+                            <p class="project-summary">
+                                MDCKE is an information extraction framework for constructing multimodal knowledge graphs that reflect deeper contextual understanding. It generates hierarchical multi-scale image representations (global + local) and captions via an Image Transformer, then fuses them with text using a dynamic-gate visual prefix that injects image features into every BERT self-attention layer. A CRF-based classifier jointly performs Named Entity Recognition (NER) and Relation Extraction (RE) to output structured entity-relation triples.
                             </p>
+                            <div class="project-highlights">
+                                <div class="project-highlight">
+                                    <h4>Key Idea</h4>
+                                    <p>Captions bridge the modality gap: global and local image captions are constituency-parsed and spliced with text, supplying semantic context that pure visual features miss — especially under low-resource conditions.</p>
+                                </div>
+                                <div class="project-highlight">
+                                    <h4>Architecture</h4>
+                                    <ul>
+                                        <li>ResNet-101 + FPN pyramid for multi-scale visual features</li>
+                                        <li>Image Transformer captioning (global &amp; local crops)</li>
+                                        <li>Dynamic-gate visual prefix fused into each BERT layer</li>
+                                        <li>CRF head for joint NER &amp; RE</li>
+                                    </ul>
+                                </div>
+                                <div class="project-highlight">
+                                    <h4>Results</h4>
+                                    <p>Twitter2015 NER: F1 82.44% (+5.83% over SOTA). MNRE RE: F1 88.30% (+26.26% over SOTA). Maintains consistent gains in 10–50% low-resource settings where prior models degrade sharply.</p>
+                                </div>
+                            </div>
+                            <div class="project-publication">
+                                <strong>Publication:</strong>
+                                <a href="https://doi.org/10.1016/j.aej.2025.02.079" target="_blank" rel="noopener noreferrer">MDCKE: Multimodal Deep-Context Knowledge Extractor that Integrates Contextual Information</a>
+                                — <em>Alexandria Engineering Journal</em>, Elsevier, 2025
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- ────────────────── CURRENT RESEARCH ────────────────── -->
+                    <div class="project-subsection">
+                        <h3 class="project-subsection-title">Current Research</h3>
+                        <p class="project-subsection-desc">Asan Institute of Life Sciences / Asan Medical Center</p>
+
+                        <article class="project-card project-card--secondary">
+                            <div class="project-badge-row">
+                                <span class="project-status project-status--active">Active</span>
+                                <span class="project-card-period">2026</span>
+                            </div>
+                            <h3 class="project-title">Robustness of AI-Based Quantitative Coronary Angiography to Frame Selection</h3>
+                            <div class="project-meta">
+                                <span class="project-tag">AI-QCA</span>
+                                <span class="project-tag">Multi-center</span>
+                                <span class="project-tag">Multi-frame</span>
+                                <span class="project-tag">Clinical Validation</span>
+                            </div>
+                            <p class="project-description">
+                                First systematic multi-center validation of how frame selection variability affects AI-QCA lesion detection across 420 patients and 1,052 angiograms from three hospitals. Confirmed 85–94% adjacent-frame detection consistency while identifying RAO-caudal views and distal segments as frame-selection-sensitive regions. Manuscript in preparation.
+                            </p>
+                        </article>
+
+                        <article class="project-card project-card--secondary">
+                            <div class="project-badge-row">
+                                <span class="project-status project-status--active">Active</span>
+                                <span class="project-card-period">2026</span>
+                            </div>
+                            <h3 class="project-title">Web-based 3D Medical VR Viewer for Orthopedic Surgery</h3>
+                            <div class="project-meta">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">vtk.js</span>
+                                <span class="project-tag">TotalSegmentator</span>
+                                <span class="project-tag">DICOM</span>
+                                <span class="project-tag">NIfTI</span>
+                                <span class="project-tag">THA</span>
+                                <span class="project-tag">Registration</span>
+                            </div>
+                            <p class="project-description">
+                                End-to-end automated viewer pipeline and dashboard that visualizes orthopedic patient CT (DICOM) and X-ray images in 3D within a web browser—no separate installation required. Core clinical goal: enable real-time intraoperative CT registration during hip arthroplasty to improve convenience and accuracy of artificial joint placement. Built an automated batch pipeline that scans surgical case folders, parses CT DICOM, segments bone regions with TotalSegmentator, and converts to web-optimized NIfTI formats. Developed a vtk.js-based volume renderer with interactive rotation, zoom, and windowing controls. Implemented a patient dashboard with initial-based anonymization, multi-image search and matching, and secure tunneling for external clinical access. Achieved 100% automated batch conversion and web deployment across dozens of surgical cases, with compression and optimization for smooth real-time clinical review FPS.
+                            </p>
+                        </article>
+
+                        <div class="project-grid">
+                            <article class="project-card">
+                                <div class="project-card-header">
+                                    <span class="project-status project-status--active">Active</span>
+                                    <span class="project-card-period">2026</span>
+                                </div>
+                                <h3 class="project-title">Automated IMR Reporting System</h3>
+                                <div class="project-meta">
+                                    <span class="project-tag">FastAPI</span>
+                                    <span class="project-tag">Qwen LLM</span>
+                                    <span class="project-tag">EMR</span>
+                                    <span class="project-tag">Cloudflare Tunnel</span>
+                                </div>
+                                <div class="project-description">
+                                    <p>Web service connecting hospital EMR data with a local Qwen LLM for real-time SOAP report and ENT discharge summary generation, in-browser editing, and secure PostgreSQL storage with abnormality highlighting.</p>
+                                </div>
+                                <div class="project-media project-media--duo">
+                                    <img src="sources/imr/imr-1.png" alt="ENT Report Writer patient list">
+                                    <img src="sources/imr/imr-2.png" alt="ENT Report Writer SOAP editor">
+                                </div>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-card-header">
+                                    <span class="project-status project-status--active">Active</span>
+                                    <span class="project-card-period">2026</span>
+                                </div>
+                                <h3 class="project-title">Operating Room Data Automation</h3>
+                                <div class="project-meta">
+                                    <span class="project-tag">Automation</span>
+                                    <span class="project-tag">Data Pipeline</span>
+                                    <span class="project-tag">Surgical Workflow</span>
+                                </div>
+                                <div class="project-description">
+                                    <p>Clinical data collection and preprocessing pipelines for structured OR records, enabling downstream AI applications in surgical workflow analysis and outcome prediction.</p>
+                                </div>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-card-header">
+                                    <span class="project-status project-status--active">Active</span>
+                                    <span class="project-card-period">2025 – Present</span>
+                                </div>
+                                <h3 class="project-title">IVUS Vessel Tracking</h3>
+                                <div class="project-meta">
+                                    <span class="project-tag">IVUS</span>
+                                    <span class="project-tag">SAM2</span>
+                                    <span class="project-tag">Noisy Labels</span>
+                                    <span class="project-tag">QCA</span>
+                                </div>
+                                <div class="project-description">
+                                    <p>Lumen and vessel boundary segmentation in IVUS pullback sequences using DeepLabV3+ with EfficientNet-B4. A noisy-label robustness study evaluates Type 1/2/3 radial perturbations (R0–R25) with self-training via noisy-student and multi-frame quality filtering (Dice/Lumen: 0.9415 on 100% GT). Extends to full-pullback tracking via SAM2 with predicted masks as prompts, feeding into QCA-IVUS lumen matching and diameter graph generation.</p>
+                                </div>
+                                <div class="project-media">
+                                    <img src="sources/ivus/ivus-1.png" alt="IVUS DICOM and MPXA Viewer">
+                                </div>
+                            </article>
+                        </div>
+
+                        <article class="project-card project-card--secondary">
+                            <div class="project-badge-row">
+                                <span class="project-status project-status--done">Done</span>
+                                <span class="project-card-period">2026</span>
+                            </div>
+                            <h3 class="project-title">Automated Vessel Segmentator (ClawTeam-based Agent Framework)</h3>
+                            <div class="project-meta">
+                                <span class="project-tag">Automation</span>
+                                <span class="project-tag">Agent Framework</span>
+                                <span class="project-tag">Angiography</span>
+                                <span class="project-tag">Pipeline</span>
+                            </div>
+                            <p class="project-description">
+                                Automates the full pipeline—from environment setup to model training and testing—for angiography datasets. Built a claw team-based agent framework unifying dataset processing, deep learning training, and evaluation, reducing new researcher onboarding from over one month to within one week.
+                            </p>
+                        </article>
+
+                        <article class="project-card project-card--secondary">
+                            <div class="project-badge-row">
+                                <span class="project-status project-status--done">Done</span>
+                                <span class="project-card-period">Mar 2025 – 2026</span>
+                            </div>
+                            <h3 class="project-title">Automated Medical Report Generation for Coronary Angiography</h3>
+                            <div class="project-meta" style="margin-top:0.55rem;">
+                                <span class="project-tag">MLLM</span>
+                                <span class="project-tag">LoRA Fine-tuning</span>
+                                <span class="project-tag">RAG</span>
+                                <span class="project-tag">LangGraph</span>
+                                <span class="project-tag">Multi-frame</span>
+                                <span class="project-tag">CDSS</span>
+                            </div>
+                            <p class="project-description" style="margin-top:0.85rem;">
+                                End-to-end CDSS pipeline generating structured clinical reports from coronary angiography. A two-stage LoRA fine-tuning pipeline first personalizes the VLM's reporting style, then RAG retrieves semantically similar cases from a vector DB built on DCM images, FFR tables, and historical reports. A LangGraph-based parallelized multi-agent system handles vessel classification, finding extraction, and report assembly. Multi-frame input with a TSAU-based temporal attention classifier enables multi-view vessel analysis and vessel-type–conditioned report generation.
+                            </p>
+                            <div class="project-timeline">
+                                <span class="project-timeline-item project-timeline-item--done">Data Pipeline</span>
+                                <span class="project-timeline-item project-timeline-item--done">2-Stage LoRA</span>
+                                <span class="project-timeline-item project-timeline-item--done">RAG + VectorDB</span>
+                                <span class="project-timeline-item project-timeline-item--done">LangGraph MAS</span>
+                                <span class="project-timeline-item project-timeline-item--done">Multi-frame TSAU</span>
+                                <span class="project-timeline-item project-timeline-item--done">Multi-task Classifier</span>
+                                <span class="project-timeline-item">Multi-view Training</span>
+                            </div>
+                        </article>
+
+                        <div class="project-grid">
+                            <article class="project-card">
+                                <div class="project-card-header">
+                                    <span class="project-status project-status--done">Done</span>
+                                    <span class="project-card-period">2026</span>
+                                </div>
+                                <h3 class="project-title">End-to-End Medical Image Automated Labeling System</h3>
+                                <div class="project-meta">
+                                    <span class="project-tag">Flask</span>
+                                    <span class="project-tag">PostgreSQL</span>
+                                    <span class="project-tag">DICOM</span>
+                                    <span class="project-tag">IVUS</span>
+                                    <span class="project-tag">QCA</span>
+                                </div>
+                                <div class="project-description">
+                                    <p>Web framework integrating DICOM and Excel data with IVUS/QCA side-by-side UI, keyboard shortcuts, timeline navigation, and PostgreSQL-based multi-annotator real-time sync. Reduced radiologist labeling time from two months to approximately three weeks.</p>
+                                </div>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-card-header">
+                                    <span class="project-status project-status--done">Done</span>
+                                    <span class="project-card-period">Jan 2026 – 2026</span>
+                                </div>
+                                <h3 class="project-title">Coronary Centerline Extraction</h3>
+                                <div class="project-meta">
+                                    <span class="project-tag">Centerline</span>
+                                    <span class="project-tag">Morphology</span>
+                                    <span class="project-tag">QCA</span>
+                                </div>
+                                <div class="project-description">
+                                    <p>Geometric centerline extraction from vascular segmentation masks. A skeletonized centerline's average slope segments the mask into entrance/exit regions; perpendicular normals are drawn at 3 px intervals, and each normal's contour intersections are used to shift the centerline point to the true vessel midline. The refined centerline feeds directly into QCA diameter measurement and stent-vessel registration.</p>
+                                </div>
+                                <div class="project-media">
+                                    <img src="sources/cabg/cabg-1.png" alt="CABG centerline graph overlay on angiography">
+                                </div>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-card-header">
+                                    <span class="project-status project-status--done">Done</span>
+                                    <span class="project-card-period">2025 – 2026</span>
+                                </div>
+                                <h3 class="project-title">Hydronephrosis Segmentation</h3>
+                                <div class="project-meta">
+                                    <span class="project-tag">Segmentation</span>
+                                    <span class="project-tag">Ultrasound</span>
+                                    <span class="project-tag">Pediatric Urology</span>
+                                </div>
+                                <div class="project-description">
+                                    <p>Deep learning segmentation of hydronephrosis from pediatric renal ultrasound images, in collaboration with the urology department. Focuses on grading consistency and clinical validation.</p>
+                                </div>
+                            </article>
+
                         </div>
                     </div>
 
-                    <div class="project-item">
-                        <h3 class="project-title">No-Code AI-based Personalized Healthcare Service Framework</h3>
-                        <div class="project-organization">Gachon University Pump-Prime Project</div>
-                        
-                        <div class="project-description">
-                            <p>
-                                This project proposes a No-Code AI-based personalized healthcare service framework to enable enterprises and users without coding knowledge to receive support for their desired services through specialized data analysis. The framework introduces a code generation agent based on Code-BERT. It analyzes users' natural language commands to understand requirements, and then the code generation agent writes SQL queries to retrieve necessary data from health record databases. The retrieved data is then processed through generated analysis algorithms to support personalized medical decision-making.
-                            </p>
-                            
-                            <p>
-                                In this project, I researched feature extraction and feature fusing methods from multimodal data, and also studied fine-tuning Code-BERT for SQL and deep learning algorithms. Based on this research, I presented the paper "No-Code AI-based Personalized Healthcare Service Framework" at the KDBC conference.
-                            </p>
+                    <hr class="project-section-divider">
+
+                    <!-- ────────────────── FUNDED RESEARCH ────────────────── -->
+                    <div class="project-subsection">
+                        <h3 class="project-subsection-title">Funded Research</h3>
+                        <div class="project-funded-list" style="gap:0.7rem;">
+
+                            <article class="project-funded-item-v2">
+                                <div class="funded-header">
+                                    <span class="funded-title">Deep Learning-based CDSS for Postoperative Nursing Surveillance using EMR Data</span>
+                                    <span class="funded-org">MSIT</span>
+                                </div>
+                                <p class="funded-desc">Multimodal EMR analysis with explainable AI for automated postoperative nursing surveillance. Contributed systematic literature review, published in <em>Applied Sciences</em>.</p>
+                            </article>
+
+                            <article class="project-funded-item-v2">
+                                <div class="funded-header">
+                                    <span class="funded-title">No-Code AI-based Personalized Healthcare Service Framework</span>
+                                    <span class="funded-org">Gachon University</span>
+                                </div>
+                                <p class="funded-desc">Code-BERT agent that translates natural language queries into SQL and analysis pipelines, enabling non-experts to explore clinical datasets. Presented at KDBC 2023.</p>
+                            </article>
+
+                            <article class="project-funded-item-v2">
+                                <div class="funded-header">
+                                    <span class="funded-title">Auto-Expanding Knowledge Graph-based Conversational AI</span>
+                                    <span class="funded-org">NRF</span>
+                                </div>
+                                <p class="funded-desc">NLP-driven concept extraction feeding into PolarisX knowledge graphs for continually expanding conversational AI. Published in the <em>Journal of KIISE</em>.</p>
+                            </article>
+
+                            <article class="project-funded-item-v2">
+                                <div class="funded-header">
+                                    <span class="funded-title">Advanced Conversational AI Platform based on Continuous Learning</span>
+                                    <span class="funded-org">NRF</span>
+                                </div>
+                                <p class="funded-desc">Research on catastrophic-forgetting mitigation and continual learning strategies for dialogue systems under distribution shift.</p>
+                            </article>
+
+                            <article class="project-funded-item-v2">
+                                <div class="funded-header">
+                                    <span class="funded-title">Personalized AI Platform based on Federated Continuous Learning</span>
+                                    <span class="funded-org">Gachon University</span>
+                                </div>
+                                <p class="funded-desc">Federated continual learning framework for privacy-preserving knowledge sharing across distributed edge devices in conversational AI services.</p>
+                            </article>
+
                         </div>
                     </div>
 
-                    <div class="project-item">
-                        <h3 class="project-title">Research on Auto-Expanding Knowledge Graph-based Conversational AI Framework</h3>
-                        <div class="project-organization">National Research Foundation of Korea (NRF)</div>
-                    </div>
-
-                    <div class="project-item">
-                        <h3 class="project-title">Research on Advanced Conversational AI Platform based on Continuous Learning</h3>
-                        <div class="project-organization">National Research Foundation of Korea (NRF)</div>
-                    </div>
-
-                    <div class="project-item">
-                        <h3 class="project-title">Research on Personalized AI Platform based on Federated Continuous Learning</h3>
-                        <div class="project-organization">Gachon University GL Joint Research Infrastructure Project</div>
-                    </div>
-
-                    <div class="project-item">
-                        <div class="project-description">
-                            <p>
-                                These projects were foundational research projects I participated in to build the groundwork for my research. Through these three projects, I researched the direction of personalized AI services, federated learning, continuous learning, knowledge graphs, VQA, natural language processing, image processing, continuous service provision, learning from new data, and multimodal data processing. This experience enabled me to develop the capabilities to lead future personal research and projects.
-                            </p>
-                            
-                            <p>
-                                In "Research on Auto-Expanding Knowledge Graph-based Conversational AI Framework," I utilized natural language processing to extract core concepts from user utterances and supported generating similar responses based on knowledge graphs. Additionally, by applying PolarisX, an auto-expanding knowledge graph developed in our laboratory, the system automatically expands the knowledge base and supports sustainable services that can respond to new data inputs. I conducted a survey for this project and designed the initial architecture. Based on this work, I published the paper "Trends in Empathetic AI Agent Technology for Mental Health" in the Journal of KIISE.
-                            </p>
-                            
-                            <p>
-                                Subsequently, based on ideas from continuous learning and federated learning concepts learned in networks, I applied a method that enables end-devices to share learning while maintaining security through federated continuous learning. By proposing this idea, I was selected for "Research on Advanced Conversational AI Platform based on Continuous Learning" and "Research on Personalized AI Platform based on Federated Continuous Learning."
-                            </p>
-                            
-                            <p>
-                                Through these research experiences and achievements, I have acquired the capabilities necessary to design AI systems that continuously learn and grow, and to provide trustworthy AI services.
-                            </p>
-                        </div>
-                    </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
-
